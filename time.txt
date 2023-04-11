@@ -1,0 +1,17 @@
+// The Unix timestamp saved in the database
+$timestamp = 1645714646;
+
+// Calculate the number of seconds that have passed since the timestamp
+$seconds_since_timestamp = time() - $timestamp;
+
+// Calculate the number of minutes, hours, days, and years that have passed since the timestamp
+$minutes_since_timestamp = $seconds_since_timestamp / 60;
+$hours_since_timestamp = $minutes_since_timestamp / 60;
+$days_since_timestamp = $hours_since_timestamp / 24;
+$years_since_timestamp = $days_since_timestamp / 365;
+
+// Output the results
+echo "Minutes since timestamp: " . round($minutes_since_timestamp) . "<br>";
+echo "Hours since timestamp: " . round($hours_since_timestamp) . "<br>";
+echo "Days since timestamp: " . round($days_since_timestamp) . "<br>";
+echo "Years since timestamp: " . round($years_since_timestamp);
